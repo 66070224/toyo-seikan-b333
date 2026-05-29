@@ -1,0 +1,16 @@
+เวลาคุณแก้ไฟล์ในอนาคต ใช้แค่:
+
+git add .
+git commit -m "update"
+git push
+
+ขั้นตอนการนำโปรเจกต์ขึ้นGithub 
+💡 สรุป
+
+init ✅
+add ✅
+commit ✅
+connect remote ✅
+push ✅
+
+👉 ตอนนี้คุณใช้ GitHub ได้แบบเต็มระบบแล้ว 🎯
