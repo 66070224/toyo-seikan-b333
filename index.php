@@ -34,7 +34,20 @@
         text-decoration: none !important;
     }
 
+    .row-eq-height {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
+    @media (width < 768px) {
+        .row-eq-height {
+            display: block;
+        }
+    }
+
+    .row-eq-height>[class*='col-'] {
+        display: flex;
+    }
 
     .card {
         border-radius: 5px;
@@ -44,7 +57,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        height: 100%;
+        width: 100%;
     }
 
     .card>.card-header {
@@ -71,6 +84,7 @@
     }
 
     .card>.card-footer {
+        margin-top: auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -82,6 +96,7 @@
 
     .card>.card-body {
         margin-bottom: 10px;
+        font-size: smaller;
     }
 
     .row>div {
@@ -207,8 +222,8 @@
             </section>
 
             <!-- SECTION 3 -->
-            <section class="section-3 row">
-                <div class="col-lg-4 col-12">
+            <section class="section-3 row row-eq-height">
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 col-12">
                     <div class="card">
                         <div class="card-header">
                             <h5>
@@ -221,7 +236,8 @@
                                 <div class="course-row-responsive"
                                     style="padding-left: 10px; border-left: 5px solid #337ab7; display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
                                     <div style="display: flex; flex-direction: column; width: 50%;">
-                                        <h5 style="font-weight: bold;">การตั้งค่าเครื่องจักรเบื้องต้น</h5>
+                                        <h5 style="font-weight: bold;">การตั้งค่าเครื่องจักรเบื้องต้น
+                                        </h5>
                                         <span>Machine Setup Basics</span>
                                     </div>
                                     <div
@@ -283,7 +299,7 @@
                         <div class="card-footer"><a href="">ดูทั้งหมด</a></div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                     <div class="card">
                         <div class="card-header">
                             <h5>
@@ -330,7 +346,7 @@
                         <div class="card-footer"><a href="">ดูทั้งหมด</a></div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                     <div class="card">
                         <div class="card-header">
                             <h5>
@@ -383,15 +399,152 @@
             </section>
 
             <!-- SECTION 4 -->
-            <section class="section-4 row">
-                <div class="col-lg-4 col-12">
-                    <div class="card">TEST</div>
+            <section class="section-4 row row-eq-height">
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>ประกาศจากบริษัท</h5>
+                            <a href="">ดูทั้งหมด</a>
+                        </div>
+                        <div class="card-body">
+                            <div style="display: flex; flex-direction: column; gap:20px">
+                                <div
+                                    style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                                    <div
+                                        style="display: flex; flex-direction: row; align-items: center; width: 80%; gap: 10px;">
+                                        <i class="fa-solid fa-bullhorn fa-xl" style="color: rgb(116, 192, 252);"></i>
+                                        <span
+                                            style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 90%;">แจ้งเปลี่ยนแปลงเวลาอบรม
+                                            Safety Training
+                                            ประจำเดือน พ.ศ. 2567</span>
+                                    </div>
+                                    <span style="width: 20%; text-align: end;">08 พ.ค. 67</span>
+                                </div>
+                                <div
+                                    style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                                    <div
+                                        style="display: flex; flex-direction: row; align-items: center; width: 80%; gap: 10px;">
+                                        <i class="fa-solid fa-bullhorn fa-xl" style="color: rgb(116, 192, 252);"></i>
+                                        <span
+                                            style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 90%;">ขอเชิญเข้าร่วมกิจกรรม
+                                            5ส Big Cleaning Day</span>
+                                    </div>
+                                    <span style="width: 20%; text-align: end;">05 พ.ค. 67</span>
+                                </div>
+                                <div
+                                    style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                                    <div
+                                        style="display: flex; flex-direction: row; align-items: center; width: 80%; gap: 10px;">
+                                        <i class="fa-solid fa-bullhorn fa-xl" style="color: rgb(116, 192, 252);"></i>
+                                        <span
+                                            style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 90%;">อัปเดตเอกสาร
+                                            Work Instruction Line 1</span>
+                                    </div>
+                                    <span style="width: 20%; text-align: end;">02 พ.ค. 67</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card">TEST</div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>ประวัติการเรียนล่าสุด</h5>
+                            <a href="">ดูทั้งหมด</a>
+                        </div>
+                        <div class="card-body">
+                            <div style="display: flex; flex-direction: column;">
+                                <div
+                                    style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                                    <div
+                                        style="display: flex; flex-direction: row; gap:5px; align-items: center; width: 50%;">
+                                        <i class="fa-solid fa-circle-check fa-xl" style="color: rgb(99, 230, 114);"></i>
+                                        <h5>GMP Refresher Training</h5>
+                                    </div>
+                                    <span>เรียนจบ</span>
+                                    <span>10 พ.ค. 67</span>
+                                    <h4>85%</h4>
+                                </div>
+                                <div
+                                    style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                                    <div
+                                        style="display: flex; flex-direction: row; gap:5px; align-items: center; width: 50%;">
+                                        <i class="fa-solid fa-circle-check fa-xl" style="color: rgb(99, 230, 114);"></i>
+                                        <h5>QC Basic</h5>
+                                    </div>
+                                    <span>เรียนจบ</span>
+                                    <span>09 พ.ค. 67</span>
+                                    <h4>80%</h4>
+                                </div>
+                                <div
+                                    style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                                    <div
+                                        style="display: flex; flex-direction: row; gap:5px; align-items: center; width: 50%;">
+                                        <i class="fa-solid fa-circle-check fa-xl" style="color: rgb(99, 230, 114);"></i>
+                                        <h5>Machine Setup</h5>
+                                    </div>
+                                    <span>เรียนจบ</span>
+                                    <span>08 พ.ค. 67</span>
+                                    <h4>60%</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card">TEST</div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>ติดต่อ / บุคคลที่เกี่ยวข้อง</h5>
+                        </div>
+                        <div class="card-body">
+                            <div style="display: flex; flex-direction: column; gap:5px;">
+                                <div
+                                    style="display:flex; flex-direction:row; align-items: center; justify-content: space-between;">
+                                    <div
+                                        style="display: flex; flex-direction: row; align-items: center; gap: 5px; width: 50%;">
+                                        <img src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+                                            alt="profile image" style="border-radius: 100%; width: 40px; height: 40px;">
+                                        <div style="display: flex; flex-direction: column;">
+                                            <span>หัวหน้างาน</span>
+                                            <h5 style="margin: 0;"><strong>คุณสมชาย ใจดี</strong></h5>
+                                        </div>
+                                    </div>
+                                    <span>02-123-4567</span>
+                                    <i class="fa-regular fa-comment-dots fa-xl" style="color: rgb(116, 192, 252);"></i>
+                                </div>
+                                <div
+                                    style="display:flex; flex-direction:row; align-items: center; justify-content: space-between;">
+                                    <div
+                                        style="display: flex; flex-direction: row; align-items: center; gap: 5px; width: 50%;">
+                                        <img src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+                                            alt="profile image" style="border-radius: 100%; width: 40px; height: 40px;">
+                                        <div style="display: flex; flex-direction: column;">
+                                            <span>ผู้ประสานงานอบรม</span>
+                                            <h5 style="margin: 0;"><strong>คุณวิภา รักการอบรม</strong></h5>
+                                        </div>
+                                    </div>
+                                    <span>02-234-5678</span>
+                                    <i class="fa-regular fa-comment-dots fa-xl" style="color: rgb(116, 192, 252);"></i>
+                                </div>
+                                <div
+                                    style="display:flex; flex-direction:row; align-items: center; justify-content: space-between;">
+                                    <div
+                                        style="display: flex; flex-direction: row; align-items: center; gap: 5px; width: 50%;">
+                                        <img src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+                                            alt="profile image" style="border-radius: 100%; width: 40px; height: 40px;">
+                                        <div style="display: flex; flex-direction: column;">
+                                            <span>ฝ่าย HR</span>
+                                            <h5 style="margin: 0;"><strong>คุณมณิวรรณ สุขใจ</strong></h5>
+                                        </div>
+                                    </div>
+                                    <span>02-345-6789</span>
+                                    <a href=""><i class="fa-regular fa-comment-dots fa-xl"
+                                            style="color: rgb(116, 192, 252);"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
