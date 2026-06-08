@@ -141,11 +141,6 @@
         margin-bottom: 20px;
     }
 
-    .section-1 {}
-
-    .section-2 {}
-
-
     @media (width < 376px) {
 
         .section-3 .course-row-responsive {
@@ -717,9 +712,6 @@
             font-weight: 600;
         }
     }
-
-
-    .section-4 {}
 </style>
 
 <body>
