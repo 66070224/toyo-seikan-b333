@@ -23,6 +23,11 @@
     <!-- Google Charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
 </head>
 
 <style>
@@ -183,6 +188,8 @@
         .mandatory>.summary-body {
             width: 100%;
         }
+
+
     }
 
     @media (max-width: 767px) {
@@ -196,6 +203,19 @@
             .search {
                 width: 100% !important;
             }
+        }
+
+        .custom-navbar {
+            flex-direction: column !important;
+            font-size: smaller;
+            padding-inline: 5px !important;
+        }
+
+        .custom-navbar>div>div,
+        form {
+            gap: 0;
+            width: 100%;
+            justify-content: space-evenly;
         }
     }
 
@@ -219,20 +239,70 @@
 
 <body>
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">WebSiteName</a>
+    <nav style="width: 100%; display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding-inline: 20px; padding-block: 5px; margin-bottom: 20px; background-color: #fff;"
+        class="custom-navbar">
+        <a href="#" style=" font-size: larger;">
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <div
+                    style="color: var(--primary-color); background-color: var(--primary-color-transparent); padding-block: 10px; padding-inline: 5px; border-radius: 100%;">
+                    <i class="fa-solid fa-user-group fa-xl"></i>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <strong>Dashboard หัวหน้างาน</strong>
+                    <span style="font-size: smaller;">ภาพรวมการเรียนรู้ของทีม Team A - Line 1 (Filling)</span>
+                </div>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
-            </ul>
+
+        </a>
+        <div style="display: flex; flex-direction: column; gap: 5px;">
+            <div
+                style="display: flex; flex-direction: row; justify-content: end; align-items: center; gap: 40px; width: 100%;">
+                <div style="display: flex; align-items: center;">
+                    <a href="#" class="notification-link">
+                        <span style="position: relative; display: inline-block;">
+                            <i class="fa-regular fa-bell fa-xl"></i>
+                            <span class="badge"
+                                style="position: absolute; top: -6px; right: -10px; background-color: #dc3545; color: #fff; padding-inline: 3px; padding-block: 3px; font-size: smaller;">12</span>
+                        </span>
+                    </a>
+                </div>
+                <a href=""><i class="fa-regular fa-circle-question fa-xl"></i>
+                </a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false" style="display: flex; flex-direction: row; align-items: center;">
+                        <div style="display: flex; flex-direction: row; align-items: center; gap: 15px;">
+                            <img src="https://img.magnific.com/free-photo/handsome-young-cheerful-man-with-arms-crossed_171337-1073.jpg?semt=ais_hybrid&w=740&q=80"
+                                alt="" class="img-circle" style="width: 40px; height: 40px;">
+                            <div style="display: flex; flex-direction: column; font-size: smaller;">
+                                <strong>คุณธนกร นายสมมุติ</strong>
+                                <span>หัวหน้าผ่ายผลิต</span>
+                            </div>
+                        </div> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <form action="" style="display: flex; flex-direction: row; gap: 10px; width: 100%;">
+                <div class="input-group">
+                    <input type="text" id="dateRange" class="form-control" style="border-right: none;" />
+                    <span class="input-group-addon" style="background:#fff;">
+                        <i class="fa-regular fa-calendar"></i>
+                    </span>
+                </div>
+                <button type="submit" class="btn btn-default"
+                    style="color: var(--primary-color); border-color: var(--primary-color); "><i
+                        class="fa-solid fa-filter"></i>
+                    ตัวกรอง</button>
+            </form>
         </div>
     </nav>
-
 
 
 
@@ -1297,6 +1367,32 @@
         }
 
         window.addEventListener('resize', drawTeamChart);
+
+
+    </script>
+
+    <script>
+        $(function () {
+            $('#dateRange').daterangepicker({
+                autoUpdateInput: true,
+                locale: {
+                    format: 'DD/MM/YYYY',
+                    separator: ' - ',
+                    applyLabel: 'เลือก',
+                    cancelLabel: 'ล้าง',
+                    fromLabel: 'จาก',
+                    toLabel: 'ถึง',
+                    customRangeLabel: 'กำหนดเอง',
+                    weekLabel: 'W',
+                    daysOfWeek: ['อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส'],
+                    monthNames: [
+                        'มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน',
+                        'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'
+                    ],
+                    firstDay: 1
+                }
+            });
+        });
     </script>
 
 </body>

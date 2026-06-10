@@ -162,26 +162,72 @@
             gap: 10px !important;
         }
     }
+
+    .navbar-nav>li>a {
+        display: flex;
+        align-items: center;
+        height: 50px;
+    }
+
+    .navbar-nav>li>a .fa-bell {
+        line-height: 1;
+    }
+
+    .navbar .navbar-toggle .icon-bar {
+        background-color: #333;
+    }
 </style>
 
 <body>
-
-    <nav class="navbar navbar-default">
+    <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">WebSiteName</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <div style="display: flex; flex-direction: column;"><strong>Admin
+                            Dashboard</strong><span style="font-size: smaller;">ภาพรวมระบบจัดการ</span></div>
+                </a>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
-            </ul>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li style="display: flex; align-items: center;">
+                        <a href="#" class="notification-link">
+                            <span style="position: relative; display: inline-block;">
+                                <i class="fa-regular fa-bell fa-xl"></i>
+                                <span class="badge"
+                                    style="position: absolute; top: -6px; right: -10px; background-color: #dc3545; color: #fff; padding-inline: 5px;">3</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false" style="display: flex; flex-direction: row; align-items: center;">
+                            <div style="display: flex; flex-direction: row; align-items: center; gap: 15px;">
+                                <img src="https://img.magnific.com/free-photo/handsome-young-cheerful-man-with-arms-crossed_171337-1073.jpg?semt=ais_hybrid&w=740&q=80"
+                                    alt="" class="img-circle" style="width: 40px; height: 40px;">
+                                <div style="display: flex; flex-direction: column;"><strong>Admin</strong><span
+                                        style="font-size: smaller;">System
+                                        Administrator</span></div>
+                            </div> <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-
-
-
 
 
     <div class="main-content">
